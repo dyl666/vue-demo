@@ -4,9 +4,16 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
+  state: { // 全局参数
+    wx: '',
+    wx1: '111',
+    wx2: '222'
   },
-  mutations: {
+  mutations: { // set方法
+    wxUpdate (state, wxNew) {
+      this.state.wx = wxNew
+      console.log('wxNew', wxNew)
+    }
   },
   actions: {
   },

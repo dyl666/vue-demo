@@ -1,12 +1,33 @@
 <template>
   <div id="app">
+    <p>wx:{{$store.state.wx}}</p>
+    <nine-layout></nine-layout>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
+      <router-link to="/">Home</router-link>
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+// import swiper from './components/swiper.vue'
+import nineLayout from './components/nine-layout.vue'
+
+export default {
+  name: 'App',
+  data () {
+    return {
+
+    }
+  },
+  components: {
+    // swiper,
+    nineLayout
+  }
+}
+</script>
 
 <style>
 #app {
@@ -28,5 +49,10 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+ul,li{
+  list-style: none;
+  padding: 0;
 }
 </style>
